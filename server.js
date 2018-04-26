@@ -17,7 +17,7 @@ router.get("/api/articles", articlesController.find);
 router.post("/api/articles", articlesController.insert);
 router.delete("/api/articles/:id", articlesController.delete);
 router.use(function(req, res) {
-    res.sendFile(path.join(__dirname, "../client/build/index.html"));
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 app.use(router);
