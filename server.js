@@ -8,6 +8,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static("client/build"));
 
 var articlesController = require("./server/controllers/articleController.js");
 var router = new express.Router();
